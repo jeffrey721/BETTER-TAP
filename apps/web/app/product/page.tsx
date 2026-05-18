@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Reveal } from "@/components/reveal";
-import { Device } from "@/components/device";
 import { usd } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -81,8 +80,26 @@ export default function ProductPage() {
             </Link>
           </div>
         </Reveal>
-        <Reveal delay={120} className="flex items-center justify-center">
-          <Device />
+        <Reveal delay={120} className="grid gap-4">
+          <div className="img-zoom overflow-hidden rounded-2xl border border-border bg-surface">
+            <video
+              className="aspect-video w-full object-cover"
+              src="/video/product.mp4"
+              poster="/img/product-white.jpg"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="img-zoom overflow-hidden rounded-2xl border border-border bg-surface">
+              <img src="/img/product-white.jpg" alt="Better Tap in architectural white" className="w-full" />
+            </div>
+            <div className="img-zoom overflow-hidden rounded-2xl border border-border bg-surface">
+              <img src="/img/product-black.jpg" alt="Better Tap in matte black" className="w-full" />
+            </div>
+          </div>
         </Reveal>
       </section>
 

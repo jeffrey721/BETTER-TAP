@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Reveal } from "@/components/reveal";
-import { Device } from "@/components/device";
 import { StatCounter } from "@/components/stat-counter";
 
 const problems = [
@@ -138,7 +137,17 @@ export default function HomePage() {
           </div>
 
           <Reveal delay={160} className="flex items-center justify-center">
-            <Device className="scale-90 sm:scale-100" />
+            <div className="w-full overflow-hidden rounded-3xl border border-border bg-black shadow-xl">
+              <video
+                className="aspect-video w-full object-contain"
+                src="/video/hero.mp4"
+                poster="/img/hero-poster.jpg"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            </div>
           </Reveal>
         </div>
       </section>
@@ -239,19 +248,28 @@ export default function HomePage() {
 
       {/* --------------------------------------------- SUSTAINABILITY */}
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
-        <Reveal className="rounded-3xl border border-border bg-surface px-8 py-14 text-center">
-          <Eyebrow>Plastic avoided</Eyebrow>
-          <p className="mx-auto mt-5 max-w-3xl text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl">
-            <span className="text-accent">
-              <StatCounter value={2847196} />
-            </span>{" "}
-            plastic bottles skipped
-          </p>
-          <p className="mx-auto mt-4 max-w-md text-sm text-muted">
-            An estimate of the single-use bottles Better Tap households have
-            kept out of the waste stream so far this year.
-          </p>
-        </Reveal>
+        <div className="grid items-center gap-8 lg:grid-cols-2">
+          <Reveal className="img-zoom overflow-hidden rounded-3xl border border-border">
+            <img
+              src="/img/lifestyle-kitchen.jpg"
+              alt="Two glasses of purified water on a kitchen counter beside a Better Tap"
+              className="w-full"
+            />
+          </Reveal>
+          <Reveal delay={120} className="rounded-3xl border border-border bg-surface px-8 py-14 text-center">
+            <Eyebrow>Plastic avoided</Eyebrow>
+            <p className="mt-5 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
+              <span className="text-accent">
+                <StatCounter value={2847196} />
+              </span>{" "}
+              plastic bottles skipped
+            </p>
+            <p className="mx-auto mt-4 max-w-sm text-sm text-muted">
+              An estimate of the single-use bottles Better Tap households have
+              kept out of the waste stream so far this year.
+            </p>
+          </Reveal>
+        </div>
       </section>
 
       {/* ----------------------------------------------- SOCIAL PROOF */}

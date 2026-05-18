@@ -55,7 +55,28 @@ export default function TechnologyPage() {
         </Reveal>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 pb-16 sm:px-8 lg:pb-24">
+      {/* spec strip */}
+      <section className="border-y border-border bg-brand text-brand-contrast">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-5 py-14 text-center sm:px-8 lg:grid-cols-3">
+          {[
+            ["99.9%", "Microplastics removed"],
+            ["97%", "Chlorine removed"],
+            ["99%", "Heavy metals removed"],
+            ["50", "Temperature settings"],
+            ["2 L / min", "Chilled water flow"],
+            ["0.67 kWh", "Energy use per day"],
+          ].map(([v, l]) => (
+            <div key={l}>
+              <div className="text-3xl font-extrabold tracking-tight text-accent sm:text-4xl">
+                {v}
+              </div>
+              <div className="mt-1 text-sm opacity-70">{l}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 pb-16 pt-16 sm:px-8 lg:pb-24">
         <div className="space-y-5">
           {chapters.map((c, i) => (
             <Reveal as="article" delay={i * 60} key={c.n}>
@@ -72,6 +93,55 @@ export default function TechnologyPage() {
               </div>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      {/* explainer videos */}
+      <section className="border-t border-border bg-surface">
+        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
+          <Reveal className="max-w-2xl">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+              See it in motion
+            </span>
+            <h2 className="mt-3 text-2xl font-extrabold tracking-tight sm:text-3xl">
+              The cartridge and the UV chamber, up close.
+            </h2>
+            <p className="mt-3 text-muted">
+              Strauss Water product films — how the filtration cartridge and the
+              UV-C purification system actually work.
+            </p>
+          </Reveal>
+          <div className="mt-8 grid gap-6 lg:grid-cols-2">
+            <Reveal>
+              <figure className="overflow-hidden rounded-2xl border border-border bg-black shadow-lg">
+                <video
+                  className="aspect-video w-full"
+                  src="/video/filtration.mp4"
+                  controls
+                  playsInline
+                  preload="metadata"
+                />
+                <figcaption className="bg-surface px-4 py-2.5 text-xs font-medium text-muted">
+                  Multi-stage filtration — how it works
+                </figcaption>
+              </figure>
+            </Reveal>
+            <Reveal delay={100}>
+              <figure className="overflow-hidden rounded-2xl border border-border bg-black shadow-lg">
+                <video
+                  className="aspect-video w-full"
+                  src="/video/uv.mp4"
+                  poster="/img/control-panel.jpg"
+                  controls
+                  playsInline
+                  preload="metadata"
+                />
+                <figcaption className="bg-surface px-4 py-2.5 text-xs font-medium text-muted">
+                  UV-C purification — the final line of defense
+                </figcaption>
+              </figure>
+            </Reveal>
+          </div>
         </div>
       </section>
 

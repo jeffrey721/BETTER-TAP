@@ -30,23 +30,22 @@ export default function ShopPage() {
 
       <section className="mx-auto max-w-7xl px-5 pb-20 sm:px-8 lg:pb-28">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {products.map((p, i) => (
+          {products.map((p, i) => {
+            const img: Record<string, string> = {
+              "better-tap-white": "/img/product-white.jpg",
+              "better-tap-black": "/img/product-black.jpg",
+              "filter-subscription": "/img/dispense.jpg",
+              "co2-cylinder": "/img/control-panel.jpg",
+            };
+            return (
             <Reveal as="article" delay={i * 80} key={p.slug}>
               <div className="card-lift flex h-full flex-col rounded-2xl border border-border bg-surface p-6 hover:border-accent hover:shadow-xl">
                 {/* visual */}
-                <div className="img-zoom relative mb-5 flex h-44 items-center justify-center rounded-xl border border-border bg-bg">
-                  <div
-                    className="h-24 w-16 rounded-2xl border border-border"
-                    style={{
-                      background:
-                        p.slug === "better-tap-black"
-                          ? "linear-gradient(160deg,#2a2f3f,#0d1018)"
-                          : p.slug === "filter-subscription"
-                            ? "linear-gradient(160deg,var(--color-accent),var(--color-accent-strong))"
-                            : p.slug === "co2-cylinder"
-                              ? "linear-gradient(160deg,#9aa6b2,#5f6672)"
-                              : "linear-gradient(160deg,#ffffff,#dfe4e8)",
-                    }}
+                <div className="img-zoom relative mb-5 h-44 overflow-hidden rounded-xl border border-border bg-bg">
+                  <img
+                    src={img[p.slug]}
+                    alt={p.name}
+                    className="h-full w-full object-cover"
                   />
                   {p.badge && (
                     <span className="absolute left-3 top-3 rounded-full bg-accent px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">
@@ -79,7 +78,8 @@ export default function ShopPage() {
                 </div>
               </div>
             </Reveal>
-          ))}
+            );
+          })}
         </div>
 
         <Reveal delay={120} className="mt-10">
