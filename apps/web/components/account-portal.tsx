@@ -277,7 +277,7 @@ function Machine() {
             ["SKU", "2440002"],
             ["Serial number", "BT-WHT-2440002-018734"],
             ["Color", "Architectural White"],
-            ["Warranty", "Lifetime — active"],
+            ["Warranty", "2 years — active"],
             ["Registered", "5 days ago"],
           ].map(([k, v]) => (
             <div key={k} className="flex justify-between gap-4">

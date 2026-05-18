@@ -1,66 +1,13 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Reveal } from "@/components/reveal";
+import { purchaseOptions } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Shop",
   description:
     "Three ways to get Better Tap: one payment of $1,299, monthly installments via Klarna or Amazon Pay, or a low-deposit lease at $35/month.",
 };
-
-const options = [
-  {
-    id: "cash",
-    name: "One Payment",
-    tagline: "Own it outright",
-    headline: "$1,299",
-    sub: "one-time",
-    img: "/img/product-white.jpg",
-    badge: "Best value",
-    blurb:
-      "Pay once and own your Better Tap outright — the best total value, with nothing more to pay.",
-    features: [
-      "Better Tap machine — yours to keep",
-      "Free professional installation",
-      "First purification cartridge included",
-      "Lifetime warranty & support",
-    ],
-  },
-  {
-    id: "installments",
-    name: "Installments",
-    tagline: "Split it over time",
-    headline: "$108",
-    sub: "/mo for 12 months",
-    img: "/img/product-black.jpg",
-    badge: "Most popular",
-    popular: true,
-    blurb:
-      "Spread the $1,299 cost into easy monthly payments with Klarna or Amazon Pay — own it outright at the end.",
-    features: [
-      "12 monthly payments of $108.25",
-      "Pay monthly with Klarna or Amazon Pay",
-      "Own it outright at the end of the term",
-      "Free installation & lifetime warranty",
-    ],
-  },
-  {
-    id: "lease",
-    name: "Lease",
-    tagline: "Lowest upfront cost",
-    headline: "$35",
-    sub: "/mo after deposit",
-    img: "/img/dispense.jpg",
-    blurb:
-      "Pay a $450 deposit, then just $35/month. Filters, service, and support all included — relocate or upgrade anytime.",
-    features: [
-      "$450 deposit to get started",
-      "$35 / month, cancel anytime",
-      "Filters & UV lamp always included",
-      "Full service & support included",
-    ],
-  },
-];
 
 export default function ShopPage() {
   return (
@@ -74,16 +21,15 @@ export default function ShopPage() {
             Three ways to get Better Tap
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-muted">
-            Buy it outright, spread the cost interest-free, or lease with a low
-            upfront deposit. Every option includes free professional
-            installation.
+            Buy it outright, spread the cost monthly, or lease with a low
+            upfront deposit. Pick an option to continue to secure checkout.
           </p>
         </Reveal>
       </section>
 
       <section className="mx-auto max-w-7xl px-5 pb-12 sm:px-8">
         <div className="grid items-start gap-6 lg:grid-cols-3">
-          {options.map((o, i) => (
+          {purchaseOptions.map((o, i) => (
             <Reveal as="article" delay={i * 90} key={o.id}>
               <div
                 className={`card-lift flex h-full flex-col overflow-hidden rounded-2xl border bg-surface hover:shadow-xl ${
@@ -123,14 +69,14 @@ export default function ShopPage() {
                     ))}
                   </ul>
                   <Link
-                    href="/contact"
+                    href={`/checkout?option=${o.id}`}
                     className={`btn mt-7 h-12 w-full text-base ${
                       o.popular
                         ? "bg-accent text-white shadow-md hover:shadow-lg"
                         : "border border-border bg-surface text-fg hover:border-accent"
                     }`}
                   >
-                    Choose {o.name}
+                    Choose {o.name} →
                   </Link>
                 </div>
               </div>
@@ -140,7 +86,7 @@ export default function ShopPage() {
 
         <Reveal delay={120}>
           <p className="mt-8 text-center text-sm text-muted">
-            Every option includes free professional installation, a lifetime
+            Every option includes free professional installation, a 2-year
             warranty, and a 30-day money-back guarantee.
           </p>
         </Reveal>

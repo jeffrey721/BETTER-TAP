@@ -151,3 +151,124 @@ export const usd = (n: number) =>
     currency: "USD",
     maximumFractionDigits: 0,
   }).format(n);
+
+/* ----------------------------------------------- purchase options */
+export type PurchaseOption = {
+  id: "cash" | "installments" | "lease";
+  name: string;
+  tagline: string;
+  headline: string;
+  sub: string;
+  img: string;
+  badge?: string;
+  popular?: boolean;
+  blurb: string;
+  features: string[];
+  dueToday: number;
+  dueTodayLabel: string;
+  recurring?: string;
+  lineItems: { label: string; value: string }[];
+  methodIds: string[];
+};
+
+export const purchaseOptions: PurchaseOption[] = [
+  {
+    id: "cash",
+    name: "One Payment",
+    tagline: "Own it outright",
+    headline: "$1,299",
+    sub: "one-time",
+    img: "/img/product-white.jpg",
+    badge: "Best value",
+    blurb:
+      "Pay once and own your Better Tap outright — the best total value, with nothing more to pay.",
+    features: [
+      "Better Tap machine — yours to keep",
+      "Free professional installation",
+      "First purification cartridge included",
+      "2-year warranty & support",
+    ],
+    dueToday: 1299,
+    dueTodayLabel: "Due today",
+    lineItems: [
+      { label: "Better Tap machine", value: "$1,299.00" },
+      { label: "Professional installation", value: "FREE" },
+      { label: "First purification cartridge", value: "Included" },
+    ],
+    methodIds: ["card", "googlepay", "applepay", "amazonpay", "cashapp", "paypal"],
+  },
+  {
+    id: "installments",
+    name: "Installments",
+    tagline: "Split it over time",
+    headline: "$108",
+    sub: "/mo for 12 months",
+    img: "/img/product-black.jpg",
+    badge: "Most popular",
+    popular: true,
+    blurb:
+      "Spread the $1,299 cost into easy monthly payments with Klarna or Amazon Pay — own it outright at the end.",
+    features: [
+      "12 monthly payments of $108.25",
+      "Pay monthly with Klarna or Amazon Pay",
+      "Own it outright at the end of the term",
+      "Free installation & 2-year warranty",
+    ],
+    dueToday: 108.25,
+    dueTodayLabel: "First payment today",
+    recurring: "Then $108.25/month for 11 months",
+    lineItems: [
+      { label: "Better Tap machine", value: "$1,299.00 total" },
+      { label: "Payment plan", value: "12 × $108.25" },
+      { label: "Professional installation", value: "FREE" },
+    ],
+    methodIds: ["klarna", "amazonpay"],
+  },
+  {
+    id: "lease",
+    name: "Lease",
+    tagline: "Lowest upfront cost",
+    headline: "$35",
+    sub: "/mo after deposit",
+    img: "/img/dispense.jpg",
+    blurb:
+      "Pay a $450 deposit, then just $35/month. Filters, service, and support all included — relocate or upgrade anytime.",
+    features: [
+      "$450 deposit to get started",
+      "$35 / month, cancel anytime",
+      "Filters & UV lamp always included",
+      "Full service & support included",
+    ],
+    dueToday: 450,
+    dueTodayLabel: "Deposit due today",
+    recurring: "Then $35.00/month",
+    lineItems: [
+      { label: "Lease deposit", value: "$450.00" },
+      { label: "Monthly lease", value: "$35.00 / mo" },
+      { label: "Filters, service & support", value: "Included" },
+    ],
+    methodIds: ["card", "googlepay", "applepay", "amazonpay", "cashapp", "paypal"],
+  },
+];
+
+export const optionById = (id: string) =>
+  purchaseOptions.find((o) => o.id === id) ?? purchaseOptions[1];
+
+export type PaymentMethod = {
+  id: string;
+  label: string;
+  desc: string;
+  glyph: string;
+  color: string;
+  light?: boolean;
+};
+
+export const paymentMethods: PaymentMethod[] = [
+  { id: "card", label: "Credit / Debit Card", desc: "Visa, Mastercard, Amex — secured by Stripe", glyph: "▦", color: "#1a1f71" },
+  { id: "googlepay", label: "Google Pay", desc: "Pay with your Google account", glyph: "G", color: "#4285f4" },
+  { id: "applepay", label: "Apple Pay", desc: "Pay with Touch ID or Face ID", glyph: "", color: "#000000" },
+  { id: "amazonpay", label: "Amazon Pay", desc: "Use your Amazon wallet", glyph: "a", color: "#ff9900" },
+  { id: "cashapp", label: "Cash App Pay", desc: "Scan with Cash App", glyph: "$", color: "#00d632" },
+  { id: "paypal", label: "PayPal", desc: "Pay with your PayPal balance", glyph: "P", color: "#003087" },
+  { id: "klarna", label: "Klarna", desc: "Split into easy monthly payments", glyph: "K", color: "#ffb3c7", light: true },
+];
