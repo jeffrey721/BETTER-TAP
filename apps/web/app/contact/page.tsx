@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const channels = [
-  { label: "Email", value: "hello@bettertap.com" },
+  { label: "Email", value: "support@thebettertap.com" },
   { label: "Phone", value: "(212) 555-0148" },
   { label: "Support hours", value: "Mon–Fri, 9am–6pm ET" },
   { label: "Service area", value: "New York · New Jersey · Connecticut" },
@@ -40,7 +40,15 @@ export default function ContactPage() {
             ))}
           </dl>
 
-          <p className="mt-8 text-xs text-muted">
+          <div className="img-zoom mt-8 overflow-hidden rounded-2xl border border-border">
+            <img
+              src="/img/control-panel.jpg"
+              alt="The Better Tap control panel"
+              className="w-full"
+            />
+          </div>
+
+          <p className="mt-6 text-xs text-muted">
             Better Tap — powered by Strauss Water. Distributed in the U.S. by
             YJC Trade LLC, New York.
           </p>

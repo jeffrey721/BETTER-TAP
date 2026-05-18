@@ -43,6 +43,20 @@ export default function AboutPage() {
         </Reveal>
       </section>
 
+      <section className="mx-auto max-w-7xl px-5 pb-14 sm:px-8">
+        <Reveal className="overflow-hidden rounded-3xl border border-border bg-black shadow-xl">
+          <video
+            className="aspect-video w-full object-cover"
+            src="/video/product.mp4"
+            poster="/img/product-white.jpg"
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        </Reveal>
+      </section>
+
       <section className="mx-auto max-w-7xl px-5 pb-16 sm:px-8 lg:pb-24">
         <div className="grid gap-6 md:grid-cols-3">
           {values.map((v, i) => (
