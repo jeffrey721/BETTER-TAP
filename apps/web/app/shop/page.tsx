@@ -5,7 +5,7 @@ import { Reveal } from "@/components/reveal";
 export const metadata: Metadata = {
   title: "Shop",
   description:
-    "Three ways to get Better Tap: one payment of $1,299, 0% APR installments via Klarna or Amazon Pay, or a low-deposit lease at $50/month.",
+    "Three ways to get Better Tap: one payment of $1,299, monthly installments via Klarna or Amazon Pay, or a low-deposit lease at $35/month.",
 };
 
 const options = [
@@ -33,13 +33,13 @@ const options = [
     headline: "$108",
     sub: "/mo for 12 months",
     img: "/img/product-black.jpg",
-    badge: "0% APR",
+    badge: "Most popular",
     popular: true,
     blurb:
-      "Spread the $1,299 cost into easy monthly payments with Klarna or Amazon Pay. 0% APR — own it at the end.",
+      "Spread the $1,299 cost into easy monthly payments with Klarna or Amazon Pay — own it outright at the end.",
     features: [
       "12 monthly payments of $108.25",
-      "0% APR with Klarna or Amazon Pay",
+      "Pay monthly with Klarna or Amazon Pay",
       "Own it outright at the end of the term",
       "Free installation & lifetime warranty",
     ],
