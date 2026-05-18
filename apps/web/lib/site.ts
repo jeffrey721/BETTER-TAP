@@ -27,7 +27,7 @@ export const faqs = [
   },
   {
     q: "How fast does it dispense?",
-    a: "About 2 liters of chilled water or 1.3 liters of boiling water per minute — roughly 40 glasses of chilled and 80 cups of boiling water every hour. No kettle wait, ever.",
+    a: "About half a gallon of chilled water or a third of a gallon of boiling water per minute — roughly 40 glasses of chilled and 80 cups of boiling water every hour. No kettle wait, ever.",
   },
   {
     q: "How big is the unit?",

@@ -58,7 +58,7 @@ export default function TechnologyPage() {
             ["97%", "Chlorine removed"],
             ["99%", "Heavy metals removed"],
             ["50", "Temperature settings"],
-            ["2 L / min", "Chilled water flow"],
+            ["0.5 gal / min", "Chilled water flow"],
             ["0.67 kWh", "Energy use per day"],
           ].map(([v, l]) => (
             <div key={l}>
