@@ -9,6 +9,7 @@ export const nav = [
   { href: "/product", label: "Product" },
   { href: "/technology", label: "Technology" },
   { href: "/shop", label: "Shop" },
+  { href: "/preorder", label: "Pre-Order" },
   { href: "/reviews", label: "Reviews" },
   { href: "/faq", label: "FAQ" },
   { href: "/about", label: "About" },
