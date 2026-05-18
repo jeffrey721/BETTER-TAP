@@ -92,6 +92,17 @@ export function SiteHeader() {
                 </Link>
               ))}
               <Link
+                href="/account"
+                onClick={() => setOpen(false)}
+                className="mt-1 flex items-center gap-2 rounded-xl border-t border-border px-3 py-2.5 pt-3 text-sm font-semibold text-fg transition hover:bg-surface-2"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M4 21a8 8 0 0 1 16 0" />
+                </svg>
+                Customer Login
+              </Link>
+              <Link
                 href="/shop"
                 onClick={() => setOpen(false)}
                 className="btn mt-2 h-11 w-full bg-brand text-sm text-brand-contrast hover:shadow-lg"

@@ -5,7 +5,7 @@ import { Reveal } from "@/components/reveal";
 export const metadata: Metadata = {
   title: "Technology",
   description:
-    "Inside Better Tap: a multi-stage purification cartridge, continuous UV-C light, a multi-temperature tank, an integrated sparkling line, and a smart metering controller.",
+    "Inside Better Tap: a multi-stage purification cartridge, continuous UV-C light, a multi-temperature tank, and a smart metering controller.",
 };
 
 const chapters = [
@@ -26,11 +26,6 @@ const chapters = [
   },
   {
     n: "04",
-    title: "The sparkling line",
-    body: "An integrated CO₂ system carbonates water on demand. One push, one glass — no plastic bottles to refill, no separate machine on the counter.",
-  },
-  {
-    n: "05",
     title: "Smart metering",
     body: "A microcontroller meters every pour to your cup size and tracks cartridge life, so the right water arrives in the right amount and you're reminded before purification quality drifts.",
   },
@@ -45,7 +40,7 @@ export default function TechnologyPage() {
             Technology
           </span>
           <h1 className="mt-4 text-balance text-4xl font-extrabold tracking-tight sm:text-6xl">
-            Five technologies, working in one quiet cabinet.
+            Four technologies, working in one quiet cabinet.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
             Better Tap is engineered by Strauss Water, a name that has been

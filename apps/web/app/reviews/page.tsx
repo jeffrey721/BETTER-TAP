@@ -21,8 +21,8 @@ export default function ReviewsPage() {
             The bottled-water habit, quietly retired.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            Better Tap owners across New York, New Jersey, and Connecticut on
-            what changed after install day.
+            Better Tap owners across New York and New Jersey on what changed
+            after install day.
           </p>
         </Reveal>
         <Reveal delay={120}>

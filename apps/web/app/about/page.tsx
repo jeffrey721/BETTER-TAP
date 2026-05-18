@@ -90,7 +90,7 @@ export default function AboutPage() {
             <dl className="grid grid-cols-2 gap-5">
               {[
                 ["Decades", "of Strauss Water engineering"],
-                ["3 states", "served — NY · NJ · CT"],
+                ["2 states", "served — NY · NJ"],
                 ["2 years", "standard warranty"],
                 ["1 partner", "for install & support"],
               ].map(([n, l]) => (

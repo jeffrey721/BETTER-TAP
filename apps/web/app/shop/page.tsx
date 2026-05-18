@@ -48,14 +48,14 @@ const options = [
     id: "lease",
     name: "Lease",
     tagline: "Lowest upfront cost",
-    headline: "$50",
+    headline: "$35",
     sub: "/mo after deposit",
     img: "/img/dispense.jpg",
     blurb:
-      "Pay a $450 deposit, then just $50/month. Filters, service, and support all included — relocate or upgrade anytime.",
+      "Pay a $450 deposit, then just $35/month. Filters, service, and support all included — relocate or upgrade anytime.",
     features: [
       "$450 deposit to get started",
-      "$50 / month, cancel anytime",
+      "$35 / month, cancel anytime",
       "Filters & UV lamp always included",
       "Full service & support included",
     ],

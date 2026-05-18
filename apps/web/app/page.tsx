@@ -25,8 +25,8 @@ const frames = [
   },
   {
     step: "02",
-    title: "Four temperatures, plus sparkling",
-    body: "Ice-cold, room, hot, and boiling — and a sparkling line for water with a bit of life to it. Every pour is metered to your glass.",
+    title: "Four temperatures, instant",
+    body: "Ice-cold, room, hot, and a true boiling draw — every pour metered to your glass, with no kettle wait.",
   },
   {
     step: "03",
@@ -37,7 +37,7 @@ const frames = [
 
 const techTeasers = [
   { label: "Four temperatures", value: "Instant" },
-  { label: "Sparkling on demand", value: "Built in" },
+  { label: "Essential minerals kept", value: "Yes" },
   { label: "UV-C purification", value: "99.9%" },
   { label: "Dishwasher-safe cartridge", value: "6 months" },
 ];
@@ -51,7 +51,7 @@ const reviews = [
   },
   {
     quote:
-      "It looks like it belongs in the kitchen — not like an appliance we tolerated. Sparkling water on tap is dangerous in the best way.",
+      "It looks like it belongs in the kitchen — not like an appliance we tolerated. Ice-cold water on tap is dangerous in the best way.",
     name: "Daniel & Aviva K.",
     place: "Monsey, NY",
   },
@@ -74,6 +74,24 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 export default function HomePage() {
   return (
     <>
+      {/* turquoise "water" accents framing the page sides */}
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-y-0 left-0 z-40 w-12 sm:w-24"
+        style={{
+          background:
+            "linear-gradient(to right, rgba(20,200,220,0.28), rgba(20,200,220,0.06) 55%, transparent)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-y-0 right-0 z-40 w-12 sm:w-24"
+        style={{
+          background:
+            "linear-gradient(to left, rgba(20,200,220,0.28), rgba(20,200,220,0.06) 55%, transparent)",
+        }}
+      />
+
       {/* ---------------------------------------------------------- HERO */}
       <section className="relative overflow-hidden">
         <div
@@ -88,12 +106,12 @@ export default function HomePage() {
             <Reveal>
               <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-muted">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                Now installing across NY · NJ · CT
+                Now installing across NY · NJ
               </span>
             </Reveal>
             <Reveal delay={80}>
               <h1 className="mt-6 text-balance text-5xl font-extrabold leading-[1.03] tracking-tight sm:text-6xl lg:text-7xl">
-                Hot. Cold. Sparkling.
+                Hot. Cold.
                 <span className="text-accent"> Pure.</span> Always.
               </h1>
             </Reveal>
@@ -123,7 +141,7 @@ export default function HomePage() {
             <Reveal delay={260}>
               <dl className="mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-border pt-7">
                 {[
-                  ["4-temp", "+ sparkling"],
+                  ["4 temps", "no kettle"],
                   ["99.9%", "purified"],
                   ["1 line", "no deliveries"],
                 ].map(([n, l]) => (
@@ -210,15 +228,15 @@ export default function HomePage() {
           <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
             <Reveal>
               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-strong">
-                Five technologies, one cabinet
+                Four technologies, one cabinet
               </span>
               <h2 className="mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl">
                 Engineered by Strauss Water. Tuned for your kitchen.
               </h2>
               <p className="mt-5 max-w-md text-base leading-relaxed opacity-75">
                 A multi-stage cartridge, continuous UV-C purification, a
-                thermally-isolated multi-temperature tank, an integrated
-                sparkling line, and a smart controller that meters every pour.
+                thermally-isolated multi-temperature tank, and a smart
+                controller that meters every pour.
               </p>
               <Link
                 href="/technology"

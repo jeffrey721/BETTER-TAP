@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const TOTAL = 4;
 
-/** NY / NJ / CT ZIP prefixes — our current install territory. */
-const SERVICE_PREFIXES = ["06", "07", "08", "10", "11", "12", "13", "14"];
+/** NY / NJ ZIP prefixes — our current install territory. */
+const SERVICE_PREFIXES = ["07", "08", "10", "11", "12", "13", "14"];
 
 const countertops = [
   "Granite",
@@ -41,7 +41,7 @@ export function PreorderQuiz() {
       ? {
           tone: "wait",
           title: "We're not installing in your area just yet",
-          body: "Better Tap currently installs across New York, New Jersey, and Connecticut. Leave your details and we'll reach out the moment we reach your ZIP code.",
+          body: "Better Tap currently installs across New York and New Jersey. Leave your details and we'll reach out the moment we reach your ZIP code.",
           cta: "Join the waitlist",
           href: "/contact",
         }
@@ -211,7 +211,7 @@ export function PreorderQuiz() {
           </h1>
           <p className="mt-2 text-sm text-muted">
             We&apos;ll check whether we install in your area — currently New
-            York, New Jersey &amp; Connecticut.
+            York &amp; New Jersey.
           </p>
           <input
             inputMode="numeric"

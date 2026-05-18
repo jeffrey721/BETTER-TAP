@@ -6,12 +6,11 @@ import { usd } from "@/lib/site";
 export const metadata: Metadata = {
   title: "The Water Bar",
   description:
-    "Better Tap delivers chilled, room, hot, boiling, and sparkling water from one plumbed-in appliance — purified by a multi-stage cartridge and continuous UV-C light.",
+    "Better Tap delivers chilled, room, hot, and boiling water from one plumbed-in appliance — purified by a multi-stage cartridge and continuous UV-C light.",
 };
 
 const specs: [string, string][] = [
   ["Temperatures", "Chilled · Room · Hot · Boiling"],
-  ["Sparkling", "Integrated CO₂ line"],
   ["Purification", "Multi-stage cartridge + continuous UV-C"],
   ["Cartridge life", "≈ 6 months · dishwasher-safe"],
   ["Connection", "Plumbed to existing cold-water line"],
@@ -23,7 +22,6 @@ const specs: [string, string][] = [
 const included = [
   "Better Tap unit in your chosen finish",
   "First purification cartridge, installed",
-  "Sparkling CO₂ cylinder",
   "Professional plumbed-in installation",
   "Walkthrough and registration on install day",
 ];
@@ -31,7 +29,7 @@ const included = [
 const compare = [
   {
     label: "Bottled water delivery",
-    bad: ["Plastic to store and haul", "Recurring deliveries", "No hot or sparkling"],
+    bad: ["Plastic to store and haul", "Recurring deliveries", "No hot water"],
   },
   {
     label: "Filter pitcher",
@@ -39,7 +37,7 @@ const compare = [
   },
   {
     label: "Plumbed filter tap",
-    bad: ["Cold only", "No sparkling", "No UV purification"],
+    bad: ["Cold only", "No boiling water", "No UV purification"],
   },
 ];
 
@@ -61,9 +59,9 @@ export default function ProductPage() {
             One water bar. Every pour you need.
           </h1>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-muted">
-            Better Tap replaces the kettle, the pitcher, the sparkling machine,
-            and the bottled-water habit with a single plumbed-in appliance —
-            purified water, instantly, in five forms.
+            Better Tap replaces the kettle, the pitcher, and the bottled-water
+            habit with a single plumbed-in appliance — purified water,
+            instantly, at every temperature.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
@@ -172,7 +170,7 @@ export default function ProductPage() {
             <h3 className="text-base font-bold text-accent-strong">Better Tap</h3>
             <ul className="mt-4 grid gap-2 sm:grid-cols-3">
               {[
-                "Chilled, hot, boiling & sparkling",
+                "Chilled, room, hot & boiling",
                 "Continuous UV-C purification",
                 "No plastic, no deliveries",
               ].map((g) => (

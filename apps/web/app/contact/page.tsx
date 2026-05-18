@@ -5,14 +5,14 @@ import { ContactForm } from "./contact-form";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Talk to Better Tap about installing a water bar in your kitchen. We serve New York, New Jersey, and Connecticut.",
+    "Talk to Better Tap about installing a water bar in your kitchen. We serve New York and New Jersey.",
 };
 
 const channels = [
   { label: "Email", value: "support@thebettertap.com" },
   { label: "Phone", value: "(212) 555-0148" },
   { label: "Support hours", value: "Mon–Fri, 9am–6pm ET" },
-  { label: "Service area", value: "New York · New Jersey · Connecticut" },
+  { label: "Service area", value: "New York · New Jersey" },
 ];
 
 export default function ContactPage() {

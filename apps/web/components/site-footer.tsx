@@ -39,8 +39,8 @@ export function SiteFooter() {
           <div>
             <Wordmark className="text-2xl" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
-              The plumbed-in water bar. Chilled, hot, boiling, and sparkling
-              water — purified and ready, with no plastic to carry home.
+              The plumbed-in water bar. Chilled, room, hot, and boiling water
+              — purified and ready, with no plastic to carry home.
             </p>
             <p className="mt-6 text-xs text-muted">
               Better Tap — powered by Strauss Water. Distributed in the U.S. by
@@ -67,7 +67,10 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-14 flex flex-col gap-4 border-t border-border pt-8 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} YJC Trade LLC. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Better Tap. All rights reserved.
+            Powered by YJC Trade LLC.
+          </p>
           <div className="flex gap-5">
             <Link href="/contact" className="link-underline hover:text-fg">Privacy</Link>
             <Link href="/contact" className="link-underline hover:text-fg">Terms</Link>

@@ -76,7 +76,7 @@ export const reviews = [
   },
   {
     quote:
-      "It looks like it belongs in the kitchen — not like an appliance we tolerated. Sparkling water on tap is dangerous in the best way.",
+      "It looks like it belongs in the kitchen — not like an appliance we tolerated. Ice-cold water on tap is dangerous in the best way.",
     name: "Daniel & Aviva K.",
     place: "Monsey, NY",
   },
@@ -123,7 +123,7 @@ export const products: Product[] = [
     tagline: "SKU 2440002",
     priceUsd: 1150,
     blurb:
-      "The plumbed-in water bar. Chilled, room, hot, and boiling water — plus sparkling on demand. Finished in soft architectural white.",
+      "The plumbed-in water bar. Chilled, room, hot, and boiling water — purified and instant. Finished in soft architectural white.",
     badge: "Most popular",
   },
   {
@@ -142,14 +142,6 @@ export const products: Product[] = [
     cadence: "per quarter",
     blurb:
       "The dishwasher-safe purification cartridge, delivered before it's due. Skip, pause, or change cadence anytime.",
-  },
-  {
-    slug: "co2-cylinder",
-    name: "Sparkling CO₂ Cylinder",
-    tagline: "Accessory",
-    priceUsd: 24,
-    blurb:
-      "Keeps the sparkling line running. One cylinder carbonates roughly 60 liters of water.",
   },
 ];
 
