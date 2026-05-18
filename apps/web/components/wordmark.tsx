@@ -9,7 +9,10 @@ export function Wordmark({ className = "" }: { className?: string }) {
       className={`group inline-flex items-baseline font-extrabold tracking-tight ${className}`}
     >
       <span className="text-fg">Better</span>
-      <span className="text-accent transition-colors group-hover:text-accent-strong">
+      <span
+        className="transition-opacity group-hover:opacity-80"
+        style={{ color: "#1e88e5" }}
+      >
         Tap
       </span>
       <sup className="ml-0.5 text-[0.5em] font-semibold text-muted">®</sup>
