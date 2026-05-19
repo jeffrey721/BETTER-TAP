@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { EnvBadge } from "@/components/env-badge";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -48,6 +49,7 @@ export default function RootLayout({
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
+        <EnvBadge />
       </body>
     </html>
   );
