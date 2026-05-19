@@ -117,9 +117,10 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={140}>
               <p className="mt-6 max-w-md text-lg leading-relaxed text-muted">
-                Better Tap is the plumbed-in water bar for the American kitchen.
-                One appliance, four temperatures, zero plastic — purified water
-                the moment you want it.
+                Not just filtered — intelligently purified, protected, and
+                perfected. Unlimited hot, cold, and ambient water in one
+                seamless, sleek system. No waste, no waiting, no
+                second-guessing.
               </p>
             </Reveal>
             <Reveal delay={200}>
