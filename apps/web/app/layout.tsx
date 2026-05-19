@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s · Better Tap",
   },
   description:
-    "Better Tap is the plumbed-in water bar for the American kitchen: chilled, room, hot, and boiling water — purified, instant, and plastic-free. Powered by Strauss Water.",
+    "Better Tap is the plumbed-in water bar for the American kitchen: chilled, room, and hot water — purified, instant, and plastic-free. Powered by Strauss Water.",
 };
 
 /* Sets the theme before paint so there is no flash. */

@@ -39,8 +39,8 @@ export function SiteFooter() {
           <div>
             <Wordmark className="text-2xl" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
-              The plumbed-in water bar. Chilled, room, hot, and boiling water
-              — purified and ready, with no plastic to carry home.
+              The plumbed-in water bar. Chilled, room, and hot water —
+              purified and ready, with no plastic to carry home.
             </p>
             <p className="mt-6 text-xs text-muted">
               Better Tap — powered by Strauss Water. Distributed in the U.S. by

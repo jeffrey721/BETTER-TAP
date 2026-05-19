@@ -2,18 +2,18 @@ import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import { StatCounter } from "@/components/stat-counter";
 
-const problems = [
+const benefits = [
   {
-    title: "Bottled water, hauled home",
-    body: "Cases of plastic carried up the stairs, stacked in the pantry, and trucked to a landfill. A household runs through hundreds of bottles a year.",
+    title: "Endless purified water",
+    body: "Chilled, room, and hot water on tap — purified continuously and ready the moment you want it. No bottles to buy, no jug to refill.",
   },
   {
-    title: "The kettle wait",
-    body: "Two or three minutes, every time, for tea or a pour-over. Boiling water should be a button, not a chore.",
+    title: "Instant hot water",
+    body: "Hot water in a single touch — tea, coffee, and cooking made effortless, with no kettle and no waiting.",
   },
   {
-    title: "The pitcher shuffle",
-    body: "A filter jug that never holds enough, takes counter space in the fridge, and clouds over the moment you forget to change the cartridge.",
+    title: "A clean, clutter-free counter",
+    body: "One sleek appliance does the work of the kettle, the filter jug, and the cases of bottled water — and looks beautiful doing it.",
   },
 ];
 
@@ -25,8 +25,8 @@ const frames = [
   },
   {
     step: "02",
-    title: "Four temperatures, instant",
-    body: "Ice-cold, room, hot, and a true boiling draw — every pour metered to your glass, with no kettle wait.",
+    title: "Three temperatures, instant",
+    body: "Ice-cold, room, and hot — every pour metered to your glass, with no kettle wait.",
   },
   {
     step: "03",
@@ -36,7 +36,7 @@ const frames = [
 ];
 
 const techTeasers = [
-  { label: "Four temperatures", value: "Instant" },
+  { label: "Three temperatures", value: "Instant" },
   { label: "Essential minerals kept", value: "Yes" },
   { label: "UV-C purification", value: "99.9%" },
   { label: "Dishwasher-safe cartridge", value: "6 months" },
@@ -142,7 +142,7 @@ export default function HomePage() {
             <Reveal delay={260}>
               <dl className="mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-border pt-7">
                 {[
-                  ["4 temps", "no kettle"],
+                  ["3 temps", "no kettle"],
                   ["99.9%", "purified"],
                   ["1 line", "no deliveries"],
                 ].map(([n, l]) => (
@@ -171,17 +171,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ------------------------------------------------------- PROBLEM */}
+      {/* ------------------------------------------------------- BENEFITS */}
       <section className="border-t border-border bg-surface">
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
           <Reveal className="max-w-2xl">
-            <Eyebrow>The counter you have today</Eyebrow>
+            <Eyebrow>Why you&apos;ll love it</Eyebrow>
             <h2 className="mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Three appliances, doing one job badly.
+              One beautiful appliance that does it all.
             </h2>
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {problems.map((p, i) => (
+            {benefits.map((p, i) => (
               <Reveal as="article" delay={i * 90} key={p.title}>
                 <div className="card-lift h-full rounded-2xl border border-border bg-bg p-7 hover:shadow-lg">
                   <span className="text-sm font-bold text-accent">

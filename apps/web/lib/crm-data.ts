@@ -170,7 +170,7 @@ export const crmCustomers: CrmCustomer[] = [
     id: "BT-1108",
     name: "Aisha Khan",
     initials: "AK",
-    channel: "TikTok ad — “4 temperatures, one tap”",
+    channel: "TikTok ad — “3 temperatures, one tap”",
     email: "aisha.khan@email.com",
     phone: "(201) 555-0102",
     address: "5 Park Pl, Fort Lee, NJ 07024",

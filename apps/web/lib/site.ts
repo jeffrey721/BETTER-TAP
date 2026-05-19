@@ -123,7 +123,7 @@ export const products: Product[] = [
     tagline: "SKU 2440002",
     priceUsd: 1299,
     blurb:
-      "The plumbed-in water bar. Chilled, room, hot, and boiling water — purified and instant. Finished in soft architectural white.",
+      "The plumbed-in water bar. Chilled, room, and hot water — purified and instant. Finished in soft architectural white.",
     badge: "Most popular",
   },
   {

@@ -6,11 +6,11 @@ import { usd } from "@/lib/site";
 export const metadata: Metadata = {
   title: "The Water Bar",
   description:
-    "Better Tap delivers chilled, room, hot, and boiling water from one plumbed-in appliance — purified by a multi-stage cartridge and continuous UV-C light.",
+    "Better Tap delivers chilled, room, and hot water from one plumbed-in appliance — purified by a multi-stage cartridge and continuous UV-C light.",
 };
 
 const specs: [string, string][] = [
-  ["Temperatures", "Chilled · Room · Hot · Boiling"],
+  ["Temperatures", "Chilled · Room · Hot"],
   ["Purification", "Multi-stage cartridge + continuous UV-C"],
   ["Cartridge life", "≈ 6 months · dishwasher-safe"],
   ["Connection", "Plumbed to existing cold-water line"],
@@ -170,7 +170,7 @@ export default function ProductPage() {
             <h3 className="text-base font-bold text-accent-strong">Better Tap</h3>
             <ul className="mt-4 grid gap-2 sm:grid-cols-3">
               {[
-                "Chilled, room, hot & boiling",
+                "Chilled, room & hot",
                 "Continuous UV-C purification",
                 "No plastic, no deliveries",
               ].map((g) => (
