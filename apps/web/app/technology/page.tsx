@@ -70,6 +70,26 @@ const features = [
     title: "Child safety lock",
     body: "Hot water sits behind a child-safe control, so a boiling pour is never an accident.",
   },
+  {
+    icon: "🚰",
+    title: "Hands-free filling",
+    body: "An auto-stop fill senses your cup or bottle and shuts off on its own — no overflow, no waiting.",
+  },
+];
+
+const waterFaqs = [
+  {
+    q: "Does it change the water's pH or alkalinity?",
+    a: "No. Better Tap filters out impurities, but the water's pH and alkalinity stay exactly the same.",
+  },
+  {
+    q: "Does it remove fluoride?",
+    a: "No. The system retains naturally occurring minerals — including fluoride.",
+  },
+  {
+    q: "Does it affect TDS?",
+    a: "TDS measures dissolved substances and isn't a measure of purity. Better Tap preserves essential minerals, keeping TDS at appropriate levels.",
+  },
 ];
 
 export default function TechnologyPage() {
@@ -89,6 +109,53 @@ export default function TechnologyPage() {
             between your supply line and your glass.
           </p>
         </Reveal>
+      </section>
+
+      {/* not all water is created equal */}
+      <section className="mx-auto max-w-7xl px-5 pb-16 sm:px-8">
+        <Reveal className="max-w-2xl">
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+            Why it matters
+          </span>
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Not all water is created equal.
+          </h2>
+          <p className="mt-3 text-muted">
+            Better Tap isn&apos;t just filtered — it&apos;s intelligently
+            purified, protected, and perfected.
+          </p>
+        </Reveal>
+        <div className="mt-8 grid gap-5 md:grid-cols-3">
+          {[
+            {
+              icon: "🚰",
+              title: "Tap water",
+              body: "Comes with an aftertaste and questionable contaminants you can't see.",
+            },
+            {
+              icon: "🧴",
+              title: "Bottled water",
+              body: "Costly, wasteful, and often carrying microplastics of its own.",
+            },
+            {
+              icon: "🫗",
+              title: "Filter jugs",
+              body: "Left exposed to bacteria — and they strip away essential minerals.",
+            },
+          ].map((p, i) => (
+            <Reveal as="article" delay={i * 80} key={p.title}>
+              <div className="card-lift h-full rounded-2xl border border-border bg-surface p-7 hover:shadow-lg">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-bg text-xl">
+                  {p.icon}
+                </span>
+                <h3 className="mt-4 text-base font-bold">{p.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {p.body}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </section>
 
       {/* spec strip */}
@@ -184,6 +251,32 @@ export default function TechnologyPage() {
               </div>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      {/* water-quality questions */}
+      <section className="border-t border-border bg-surface">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
+          <Reveal className="max-w-2xl">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+              Water-quality questions
+            </span>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+              The science, answered plainly.
+            </h2>
+          </Reveal>
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            {waterFaqs.map((f, i) => (
+              <Reveal as="article" delay={i * 80} key={f.q}>
+                <div className="card-lift h-full rounded-2xl border border-border bg-bg p-7 hover:shadow-lg">
+                  <h3 className="text-base font-bold">{f.q}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted">
+                    {f.a}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
