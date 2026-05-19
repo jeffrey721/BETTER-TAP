@@ -5,29 +5,70 @@ import { Reveal } from "@/components/reveal";
 export const metadata: Metadata = {
   title: "Technology",
   description:
-    "Inside Better Tap: a multi-stage purification cartridge, continuous UV-C light, a multi-temperature tank, and a smart metering controller.",
+    "Inside Better Tap: a four-stage purification system — deep filtration, limescale protection, UV treatment, and mineral retention — engineered by Strauss Water.",
 };
 
-const chapters = [
+const stages = [
   {
-    n: "01",
-    title: "The multi-stage cartridge",
-    body: "Water passes through sediment, activated carbon, and ion-exchange media that clarify it — reducing chlorine taste, particulates, and the things you'd rather not drink. The cartridge is dishwasher-safe, so it actually gets cleaned.",
+    icon: "🧪",
+    n: "Stage 01",
+    title: "Deep purification",
+    body: "Water passes through a unique hydraulic system with ultra-dense nano-fibre and carbon filtration — eliminating industrial and medical waste, microplastics, and farming chemicals before they ever reach your glass.",
+    chips: [
+      "99.9% microplastics",
+      "97% chlorine",
+      "Lead, mercury & BPA",
+      "Pesticides & hormones",
+    ],
   },
   {
-    n: "02",
-    title: "Continuous UV-C purification",
-    body: "Inside the cabinet, UV-C light treats the water on its way to your glass — neutralizing 99.9% of microorganisms. It works every second the unit is plugged in, with nothing for you to switch on.",
+    icon: "🛡️",
+    n: "Stage 02",
+    title: "Limescale protection",
+    body: "A polyphosphate layer embedded in the filter prevents scale from forming — it stops mineral compounds binding together, protecting the machine and keeping water quality consistent.",
+    chips: ["No limescale buildup", "Protects the machine"],
   },
   {
-    n: "03",
-    title: "The multi-temperature tank",
-    body: "A thermally-isolated tank holds water at four ready temperatures at once — ice-cold, room, hot, and a true boiling draw — so there's no kettle wait and no warm-up.",
+    icon: "☀️",
+    n: "Stage 03",
+    title: "UV protection",
+    body: "UV-C treatment stops microbiological contaminants from growing — neutralizing bacteria and parasites. This stage is especially vital once chlorine has been removed.",
+    chips: ["Kills bacteria & parasites", "Continuous treatment"],
   },
   {
-    n: "04",
-    title: "Smart metering",
-    body: "A microcontroller meters every pour to your cup size and tracks cartridge life, so the right water arrives in the right amount and you're reminded before purification quality drifts.",
+    icon: "💎",
+    n: "Stage 04",
+    title: "Mineral retention",
+    body: "A patented system keeps the essential minerals your body needs — calcium, potassium, and magnesium — preserving up to 20% of your daily mineral requirement.",
+    chips: ["Calcium · Potassium · Magnesium", "Up to 20% daily minerals"],
+  },
+];
+
+const features = [
+  {
+    icon: "🌡️",
+    title: "50 temperature settings",
+    body: "From instant boiling to ice-cold — dialed in to the exact temperature you want, every pour.",
+  },
+  {
+    icon: "🛢️",
+    title: "Stainless steel tanks",
+    body: "The internal tanks are stainless steel, not plastic — so water never picks up microplastics inside the machine.",
+  },
+  {
+    icon: "📡",
+    title: "Smart sensors",
+    body: "Built-in sensors continuously monitor machine health and water flow, flagging maintenance before you'd notice.",
+  },
+  {
+    icon: "🍃",
+    title: "Energy-saving mode",
+    body: "The machine powers down intelligently when idle, sipping just 0.67 kWh a day.",
+  },
+  {
+    icon: "🔒",
+    title: "Child safety lock",
+    body: "Hot water sits behind a child-safe control, so a boiling pour is never an accident.",
   },
 ];
 
@@ -40,12 +81,12 @@ export default function TechnologyPage() {
             Technology
           </span>
           <h1 className="mt-4 text-balance text-4xl font-extrabold tracking-tight sm:text-6xl">
-            Four technologies, working in one quiet cabinet.
+            Four-stage purification, in one quiet cabinet.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
             Better Tap is engineered by Strauss Water, a name that has been
-            building water appliances for decades. Here is what happens between
-            your supply line and your glass.
+            building water appliances for decades. Here is exactly what happens
+            between your supply line and your glass.
           </p>
         </Reveal>
       </section>
@@ -71,20 +112,75 @@ export default function TechnologyPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 pb-16 pt-16 sm:px-8 lg:pb-24">
-        <div className="space-y-5">
-          {chapters.map((c, i) => (
-            <Reveal as="article" delay={i * 60} key={c.n}>
-              <div className="card-lift grid gap-6 rounded-2xl border border-border bg-surface p-8 hover:border-accent hover:shadow-xl sm:grid-cols-[auto_1fr] sm:gap-10 sm:p-10">
-                <div className="text-5xl font-extrabold tracking-tight text-accent/35 sm:text-7xl">
-                  {c.n}
+      {/* four-stage purification */}
+      <section className="mx-auto max-w-7xl px-5 pb-8 pt-16 sm:px-8">
+        <Reveal className="max-w-2xl">
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+            The purification system
+          </span>
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Four stages, every single pour.
+          </h2>
+          <p className="mt-3 text-muted">
+            Each glass of water moves through all four stages — purified,
+            protected, treated, and balanced.
+          </p>
+        </Reveal>
+        <div className="mt-10 grid gap-5 sm:grid-cols-2">
+          {stages.map((s, i) => (
+            <Reveal as="article" delay={i * 80} key={s.n}>
+              <div className="card-lift h-full rounded-2xl border border-border bg-surface p-7 hover:border-accent hover:shadow-xl">
+                <div className="flex items-center gap-4">
+                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-accent/15 text-2xl">
+                    {s.icon}
+                  </span>
+                  <div>
+                    <div className="text-xs font-bold uppercase tracking-wide text-accent">
+                      {s.n}
+                    </div>
+                    <h3 className="text-lg font-bold">{s.title}</h3>
+                  </div>
                 </div>
-                <div>
-                  <h2 className="text-xl font-bold sm:text-2xl">{c.title}</h2>
-                  <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
-                    {c.body}
-                  </p>
+                <p className="mt-4 text-sm leading-relaxed text-muted">
+                  {s.body}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {s.chips.map((chip) => (
+                    <span
+                      key={chip}
+                      className="rounded-full border border-border bg-bg px-2.5 py-1 text-xs font-medium text-fg"
+                    >
+                      ✓ {chip}
+                    </span>
+                  ))}
                 </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* key features */}
+      <section className="mx-auto max-w-7xl px-5 pb-16 pt-12 sm:px-8 lg:pb-24">
+        <Reveal className="max-w-2xl">
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+            Engineered in
+          </span>
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+            The details that make it effortless.
+          </h2>
+        </Reveal>
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((f, i) => (
+            <Reveal as="article" delay={i * 70} key={f.title}>
+              <div className="card-lift h-full rounded-2xl border border-border bg-surface p-7 hover:shadow-lg">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/15 text-xl">
+                  {f.icon}
+                </span>
+                <h3 className="mt-4 text-base font-bold">{f.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {f.body}
+                </p>
               </div>
             </Reveal>
           ))}
@@ -103,7 +199,7 @@ export default function TechnologyPage() {
             </h2>
             <p className="mt-3 text-muted">
               Strauss Water product films — how the filtration cartridge and the
-              UV-C purification system actually work.
+              UV purification system actually work.
             </p>
           </Reveal>
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
@@ -132,7 +228,7 @@ export default function TechnologyPage() {
                   preload="metadata"
                 />
                 <figcaption className="bg-surface px-4 py-2.5 text-xs font-medium text-muted">
-                  UV-C purification — the final line of defense
+                  UV purification — the final line of defense
                 </figcaption>
               </figure>
             </Reveal>
