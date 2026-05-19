@@ -1,0 +1,213 @@
+/**
+ * Better Tap — CRM / customer-service console sample data.
+ * Demonstration data only.
+ */
+
+export const crmSummary = {
+  email: { total: 142, handled: 128, pending: 14, speed: "1h 52m" },
+  social: { total: 86, handled: 71, pending: 15, speed: "3h 08m" },
+  whatsapp: { total: 64, handled: 58, pending: 6, speed: "41m" },
+  installs: { total: 23, completed: 17, open: 6, speed: "4.2 days" },
+};
+
+export type CrmCustomer = {
+  id: string;
+  name: string;
+  initials: string;
+  channel: string; // how they reached us
+  email: string;
+  phone: string;
+  address: string;
+  messages: { email: number; sms: number; whatsapp: number; chat: number };
+  surveyOnline: boolean;
+  surveyNote: string;
+  orderPlaced: boolean;
+  orderStatus: string; // No order | Reserved | Scheduled | Installed | Active
+  orderDetail: string;
+  driver: string; // installation driver tracking
+  sku: string;
+  installDate: string;
+  images: number;
+  repairs: string;
+  referrals: number;
+  surveyCompleted: boolean;
+};
+
+export const crmCustomers: CrmCustomer[] = [
+  {
+    id: "BT-1042",
+    name: "Sarah Mitchell",
+    initials: "SM",
+    channel: "Meta ad — “Stop paying $0.55/L” creative",
+    email: "sarah.mitchell@email.com",
+    phone: "(512) 555-0142",
+    address: "118 Larchmont Ave, Teaneck, NJ 07666",
+    messages: { email: 6, sms: 3, whatsapp: 4, chat: 1 },
+    surveyOnline: true,
+    surveyNote: "4-person household · municipal water · existing home · kitchen counter",
+    orderPlaced: true,
+    orderStatus: "Installed",
+    orderDetail: "One Payment — $1,299 · paid by card",
+    driver: "Delivered — install completed",
+    sku: "BT-EDGE-WHT-2440002",
+    installDate: "Apr 29 · 9:00–11:00 AM",
+    images: 6,
+    repairs: "None",
+    referrals: 3,
+    surveyCompleted: true,
+  },
+  {
+    id: "BT-1067",
+    name: "James Rodriguez",
+    initials: "JR",
+    channel: "Google Search — “instant boiling water tap”",
+    email: "j.rodriguez@email.com",
+    phone: "(718) 555-0188",
+    address: "44 Garfield Pl, Brooklyn, NY 11215",
+    messages: { email: 4, sms: 2, whatsapp: 5, chat: 0 },
+    surveyOnline: true,
+    surveyNote: "New parent · wants instant boiling water for formula · child lock",
+    orderPlaced: true,
+    orderStatus: "Scheduled",
+    orderDetail: "Installments — 12 × $108.25 via Klarna",
+    driver: "Dispatched — ETA 25 min",
+    sku: "BT-EDGE-BLK-2440202",
+    installDate: "May 22 · 1:00–3:00 PM",
+    images: 0,
+    repairs: "None",
+    referrals: 1,
+    surveyCompleted: false,
+  },
+  {
+    id: "BT-1071",
+    name: "Lisa Park",
+    initials: "LP",
+    channel: "TikTok ad — bottled-water cost UGC",
+    email: "lisa.park@email.com",
+    phone: "(312) 555-0119",
+    address: "9 Ridgewood Rd, Englewood, NJ 07631",
+    messages: { email: 5, sms: 4, whatsapp: 2, chat: 2 },
+    surveyOnline: true,
+    surveyNote: "Cost-conscious · chose the lease · 2-person household",
+    orderPlaced: true,
+    orderStatus: "Installed",
+    orderDetail: "Lease — $450 deposit + $35/mo",
+    driver: "Delivered — install completed",
+    sku: "BT-EDGE-WHT-2440002",
+    installDate: "May 8 · 10:00 AM–12:00 PM",
+    images: 4,
+    repairs: "None",
+    referrals: 0,
+    surveyCompleted: false,
+  },
+  {
+    id: "BT-1088",
+    name: "Daniel Cohen",
+    initials: "DC",
+    channel: "Referral — invited by Sarah Mitchell",
+    email: "daniel.cohen@email.com",
+    phone: "(201) 555-0170",
+    address: "27 Maple St, Teaneck, NJ 07666",
+    messages: { email: 3, sms: 1, whatsapp: 3, chat: 0 },
+    surveyOnline: true,
+    surveyNote: "Warm referral · ready to buy · kitchen island",
+    orderPlaced: true,
+    orderStatus: "Scheduled",
+    orderDetail: "One Payment — $1,299 via Apple Pay",
+    driver: "Not dispatched",
+    sku: "BT-EDGE-BLK-2440202",
+    installDate: "May 24 · 9:00–11:00 AM",
+    images: 0,
+    repairs: "None",
+    referrals: 0,
+    surveyCompleted: false,
+  },
+  {
+    id: "BT-1094",
+    name: "Emily Carter",
+    initials: "EC",
+    channel: "Meta ad — sustainability interest targeting",
+    email: "emily.carter@email.com",
+    phone: "(917) 555-0133",
+    address: "210 W 78th St, New York, NY 10024",
+    messages: { email: 8, sms: 3, whatsapp: 1, chat: 3 },
+    surveyOnline: true,
+    surveyNote: "Eco-focused · asked about plastic savings · existing home",
+    orderPlaced: true,
+    orderStatus: "Active",
+    orderDetail: "Installments — 12 × $108.25 via Amazon Pay",
+    driver: "Delivered — install completed",
+    sku: "BT-EDGE-WHT-2440002",
+    installDate: "Apr 26 · 2:00–4:00 PM",
+    images: 7,
+    repairs: "1 — minor drip at fitting, resolved Apr 30",
+    referrals: 4,
+    surveyCompleted: true,
+  },
+  {
+    id: "BT-1101",
+    name: "Marcus Bennett",
+    initials: "MB",
+    channel: "Google Search — “sparkling water tap home”",
+    email: "m.bennett@email.com",
+    phone: "(914) 555-0156",
+    address: "63 Soundview Dr, White Plains, NY 10606",
+    messages: { email: 2, sms: 0, whatsapp: 1, chat: 1 },
+    surveyOnline: false,
+    surveyNote: "Survey not completed — comparing lease vs. buy",
+    orderPlaced: false,
+    orderStatus: "No order",
+    orderDetail: "Lead — quote sent, awaiting decision",
+    driver: "—",
+    sku: "—",
+    installDate: "Not booked",
+    images: 0,
+    repairs: "None",
+    referrals: 0,
+    surveyCompleted: false,
+  },
+  {
+    id: "BT-1108",
+    name: "Aisha Khan",
+    initials: "AK",
+    channel: "TikTok ad — “4 temperatures, one tap”",
+    email: "aisha.khan@email.com",
+    phone: "(201) 555-0102",
+    address: "5 Park Pl, Fort Lee, NJ 07024",
+    messages: { email: 2, sms: 1, whatsapp: 0, chat: 1 },
+    surveyOnline: true,
+    surveyNote: "Qualified · wants a May install · awaiting window choice",
+    orderPlaced: true,
+    orderStatus: "Reserved",
+    orderDetail: "Installments — via Klarna",
+    driver: "Not dispatched",
+    sku: "—",
+    installDate: "Not booked",
+    images: 0,
+    repairs: "None",
+    referrals: 0,
+    surveyCompleted: false,
+  },
+  {
+    id: "BT-1120",
+    name: "Grace Thompson",
+    initials: "GT",
+    channel: "Referral — invited by Emily Carter",
+    email: "grace.thompson@email.com",
+    phone: "(646) 555-0177",
+    address: "88 Clinton Ave, Brooklyn, NY 11205",
+    messages: { email: 5, sms: 2, whatsapp: 3, chat: 0 },
+    surveyOnline: true,
+    surveyNote: "Warm referral · booked install same week",
+    orderPlaced: true,
+    orderStatus: "Active",
+    orderDetail: "Installments — 12 × $108.25 via Klarna",
+    driver: "Delivered — install completed",
+    sku: "BT-EDGE-BLK-2440202",
+    installDate: "Apr 23 · 1:00–3:00 PM",
+    images: 8,
+    repairs: "None",
+    referrals: 2,
+    surveyCompleted: true,
+  },
+];

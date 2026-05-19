@@ -68,7 +68,7 @@ export default function ProductPage() {
               href="/shop"
               className="btn h-13 bg-brand px-7 py-3.5 text-base text-brand-contrast shadow-md hover:shadow-xl"
             >
-              Get Better Tap — {usd(1150)}
+              Get Better Tap — {usd(1299)}
             </Link>
             <Link
               href="/technology"

@@ -1,0 +1,4 @@
+# Local tooling & machine-local config — not part of the project
+cloudflared.exe
+.vercel
+.claude/settings.local.json

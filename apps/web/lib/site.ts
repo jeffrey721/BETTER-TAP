@@ -121,7 +121,7 @@ export const products: Product[] = [
     slug: "better-tap-white",
     name: "Better Tap — White",
     tagline: "SKU 2440002",
-    priceUsd: 1150,
+    priceUsd: 1299,
     blurb:
       "The plumbed-in water bar. Chilled, room, hot, and boiling water — purified and instant. Finished in soft architectural white.",
     badge: "Most popular",
@@ -130,7 +130,7 @@ export const products: Product[] = [
     slug: "better-tap-black",
     name: "Better Tap — Black",
     tagline: "SKU 2440202",
-    priceUsd: 1150,
+    priceUsd: 1299,
     blurb:
       "The same purified water bar in a deep matte black, designed to disappear into a modern kitchen.",
   },

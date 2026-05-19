@@ -71,10 +71,16 @@ export function SiteFooter() {
             © {new Date().getFullYear()} Better Tap. All rights reserved.
             Powered by YJC Trade LLC.
           </p>
-          <div className="flex gap-5">
+          <div className="flex flex-wrap gap-5">
             <Link href="/contact" className="link-underline hover:text-fg">Privacy</Link>
             <Link href="/contact" className="link-underline hover:text-fg">Terms</Link>
             <Link href="/contact" className="link-underline hover:text-fg">Accessibility</Link>
+            <Link
+              href="/admin"
+              className="link-underline font-semibold text-accent hover:text-accent-strong"
+            >
+              Admin Log In
+            </Link>
           </div>
         </div>
       </div>
