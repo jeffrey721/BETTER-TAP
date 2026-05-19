@@ -37,7 +37,8 @@ Deploy Staging to Vercel (preview deployment, stable alias):
 
 ```bash
 cd apps/web
-npx vercel deploy --yes --scope yjc-trade-s-projects --token <TOKEN>
+npx vercel deploy --yes --build-env NEXT_PUBLIC_SITE_ENV=staging \
+  --scope yjc-trade-s-projects --token <TOKEN>
 npx vercel alias set <deployment-url> better-tap-staging.vercel.app \
   --scope yjc-trade-s-projects --token <TOKEN>
 ```
@@ -68,10 +69,8 @@ Production is served at the `web-delta-five-68.vercel.app` alias.
 
 Never deploy straight to Production without passing through Staging.
 
-## Environment variables (Vercel)
+## Environment variable — `NEXT_PUBLIC_SITE_ENV`
 
-`NEXT_PUBLIC_SITE_ENV` is set per Vercel environment:
-- **Production** target → `production`
-- **Preview** target (used by Staging) → `staging`
-
-Set them once with `npx vercel env add NEXT_PUBLIC_SITE_ENV <target>`.
+- **Local** — `apps/web/.env.local` sets it to `local`.
+- **Staging** — injected per deploy via `--build-env NEXT_PUBLIC_SITE_ENV=staging`.
+- **Production** — left unset; the app defaults to `production` (no badge).

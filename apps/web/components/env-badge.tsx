@@ -4,7 +4,9 @@
  * Hidden entirely on production.
  */
 export function EnvBadge() {
-  const env = process.env.NEXT_PUBLIC_SITE_ENV ?? "local";
+  // Unset = production (no badge). Local is set via .env.local, Staging
+  // is injected at deploy time with --build-env.
+  const env = process.env.NEXT_PUBLIC_SITE_ENV ?? "production";
   if (env === "production") return null;
 
   const isStaging = env === "staging";
