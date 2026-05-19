@@ -112,7 +112,7 @@ export default function HomePage() {
             <Reveal delay={80}>
               <h1 className="mt-6 text-balance text-5xl font-extrabold leading-[1.03] tracking-tight sm:text-6xl lg:text-7xl">
                 Hot. Cold.
-                <span className="text-accent"> Pure.</span> Always.
+                <span style={{ color: "#1e88e5" }}> Pure.</span> Always.
               </h1>
             </Reveal>
             <Reveal delay={140}>
