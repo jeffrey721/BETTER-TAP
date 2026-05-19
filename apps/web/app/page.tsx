@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import { StatCounter } from "@/components/stat-counter";
+import { HomeSolutions } from "@/components/home-solutions";
 
 const benefits = [
   {
@@ -222,6 +223,9 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* ------------------------------ ONE PRODUCT, EVERY PROBLEM SOLVED */}
+      <HomeSolutions />
 
       {/* ------------------------------------------------ HOW IT WORKS */}
       <section className="border-t border-border bg-surface">
