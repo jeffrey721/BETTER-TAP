@@ -222,6 +222,63 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ------------------------------------------------ HOW IT WORKS */}
+      <section className="border-t border-border bg-surface">
+        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+          <Reveal className="max-w-2xl">
+            <Eyebrow>Hassle-free from day one</Eyebrow>
+            <h2 className="mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl">
+              Up and running in three simple steps.
+            </h2>
+          </Reveal>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                step: "1",
+                title: "Pick a date",
+                body: "Choose your Better Tap, then book an installation window that suits you.",
+              },
+              {
+                step: "2",
+                title: "Professional installation",
+                body: "A certified technician connects Better Tap to your mains in under an hour — with no disruption to your existing plumbing.",
+              },
+              {
+                step: "3",
+                title: "Relax & enjoy",
+                body: "Filters and UV lamps arrive automatically, backed by lifetime support. Moving home? We relocate it for free.",
+              },
+            ].map((s, i) => (
+              <Reveal as="article" delay={i * 90} key={s.step}>
+                <div className="card-lift h-full rounded-2xl border border-border bg-bg p-8 hover:border-accent hover:shadow-xl">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-lg font-extrabold text-white">
+                    {s.step}
+                  </div>
+                  <h3 className="mt-5 text-lg font-bold">{s.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">
+                    {s.body}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={120}>
+            <div className="mt-6 flex flex-wrap justify-center gap-x-8 gap-y-3 rounded-2xl border border-border bg-bg px-6 py-5 text-sm font-medium text-muted">
+              {[
+                "⏱ Installed in under an hour",
+                "🔧 No plumbing disruption",
+                "📦 Filters auto-delivered",
+                "🚚 Free relocation if you move",
+              ].map((t) => (
+                <span key={t} className="flex items-center gap-2">
+                  {t}
+                </span>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ------------------------------------------------ TECH TEASER */}
       <section className="border-y border-border bg-brand text-brand-contrast">
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
